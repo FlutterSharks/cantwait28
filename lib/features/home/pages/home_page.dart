@@ -12,8 +12,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white12,
       appBar: AppBar(
-        title: const Text('Can\'t Wait 🤩'),
+        title: const Text('Can\'t Wait!'),
+        backgroundColor: Colors.redAccent,
       ),
       body: const _HomePageBody(),
       floatingActionButton: FloatingActionButton(
@@ -104,14 +106,14 @@ class _ListViewItem extends StatelessWidget {
       ),
       child: Container(
         decoration: const BoxDecoration(
-          color: Colors.black12,
+          color: Colors.grey,
         ),
         child: Column(
           children: [
             Container(
-              height: 80,
+              height: 90,
               decoration: BoxDecoration(
-                color: Colors.black12,
+                color: Colors.white,
                 image: DecorationImage(
                   image: NetworkImage(
                     document['image_url'],
@@ -152,8 +154,8 @@ class _ListViewItem extends StatelessWidget {
                   ),
                   margin: const EdgeInsets.all(10),
                   padding: const EdgeInsets.all(10),
-                  child: Column(
-                    children: const [
+                  child: const Column(
+                    children: [
                       Text(
                         '0',
                         style: TextStyle(
